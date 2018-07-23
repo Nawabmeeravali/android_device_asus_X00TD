@@ -264,9 +264,11 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service
 
-# LiveDisplay native
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@1.0-service-sdm
+# Manifest Hack for non NFC variant
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest_no_nfc.xml:$(TARGET_COPY_OUT_VENDOR)/manifest_no_nfc.xml \
+    $(LOCAL_PATH)/rootdir/bin/device_check.sh:install/bin/device_check.sh
+
 
 # Low power Whitelist
 PRODUCT_COPY_FILES += \
