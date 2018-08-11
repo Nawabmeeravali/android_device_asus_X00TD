@@ -1,3 +1,3 @@
 
-add_lunch_combo aoscp_X00TD-userdebug
+add_lunch_combo carbon_X00TD-userdebug
 
